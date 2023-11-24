@@ -1,5 +1,6 @@
 import './commands'
 import './forms'
+import './progressBar'
 import './tables'
 
 Cypress.on('uncaught:exception', (err, runnable) => {

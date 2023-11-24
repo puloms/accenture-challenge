@@ -6,7 +6,7 @@ describe('forms', () => {
   })
 
   it('fill forms', () => {
-    cy.createStudent().then((student)=>{
+    cy.createStudent().then((student) => {
       cy.fillForm(student);
     })
   })
