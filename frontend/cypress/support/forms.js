@@ -27,7 +27,7 @@ Cypress.Commands.add('fillForm', (student) => {
   cy.fillDatePicker('#dateOfBirthInput', student.birthYear, student.birthMonth, student.birthDay)
    
   cy.get('#subjectsWrapper').type('s')
-  cy.get(`#react-select-2-option-${Math.floor(Math.random() * (9 - 1) + 1)}`).click() //9 is the maximum
+  cy.get(`#react-select-2-option-${Math.floor(9, 1)}`).click() //9 is the maximum
    
   cy.get('input[type="file"]').as('fileInput').attachFile(student.fileName)
   
@@ -57,7 +57,3 @@ Cypress.Commands.add('assertForm', (student) => {
   })
   cy.contains('Close').click()
 })
-
-Array.prototype.sample = function(){
-  return this[Math.floor(Math.random()*this.length)]
-}

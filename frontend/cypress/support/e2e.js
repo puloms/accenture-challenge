@@ -1,5 +1,6 @@
 import './commands'
 import './forms'
+import './tables'
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false here prevents Cypress from
